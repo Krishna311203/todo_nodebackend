@@ -76,6 +76,7 @@ class _LoginPageState extends State<LoginPage> {
     Size size = MediaQuery.of(context).size;
     return _isLoading
         ? Scaffold(
+            backgroundColor: Colors.black54,
             body: Center(child: SpinKitDoubleBounce(color: MyColors().green)))
         : Scaffold(
             backgroundColor: Colors.black54,
@@ -176,14 +177,13 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       const SizedBox(height: 15),
                       TextFormField(
+                        style: TextStyle(color: MyColors().cream),
                         cursorColor: MyColors().blue,
                         obscureText: true,
                         decoration: textInputDecoration.copyWith(
                             labelText: "Password",
-                            prefixIcon: Icon(
-                              Icons.lock,
-                              color: Colors.black,
-                            )),
+                            prefixIcon: Icon(Icons.email_outlined,
+                                color: Colors.white)),
                         validator: (val) {
                           if (val!.length < 6) {
                             return "Passwod must be atleast 6 characters";

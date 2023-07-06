@@ -55,6 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return _isLoading
         ? Scaffold(
+            backgroundColor: Colors.black,
             body: Center(child: SpinKitDoubleBounce(color: MyColors().green)))
         : Scaffold(
             backgroundColor: Colors.black,
